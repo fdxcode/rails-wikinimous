@@ -1,0 +1,16 @@
+<h1 class="text-center mt-5 mb-2">Articulos</h1>
+
+<% @articles.each do |t| %>
+  <div class="container col-6 mx-auto mb-4">
+    <div class="card">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><a href="/articles/<%= t.id %>"><%= t.title %></a></h5>
+        <p class="card-text"><%= t.content %></p>
+      </div>
+    </div>
+  </div>
+
+<% end %>

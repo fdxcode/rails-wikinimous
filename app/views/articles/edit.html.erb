@@ -1,0 +1,17 @@
+<div class="container mt-4 mx-auto col-4">
+  <h2 class="text-center">Editar Articulo</h2>
+  <form class="edit_articles" action="/articles/<%= @article.id %>" accept-charset="UTF-8" method="post">
+   <input type="hidden" name="_method" value="patch">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :articles, @articles %>
+    <div class="form-group">
+      <label for="articles_title">Title</label>
+      <input type="text" class="form-control" id="articles_title" name="article[title]" value="<%= @article.title %>">
+    </div>
+    <div class="form-group">
+      <label for="article_details">Details</label>
+      <input type="text" class="form-control" id="article_details" name="article[content]" value="<%= @article.content %>">
+    </div>
+    <button type="submit" class="btn btn-primary w-100 mt-2"><i class="far fa-edit"></i> Edit</button>
+  </form>
+</div>

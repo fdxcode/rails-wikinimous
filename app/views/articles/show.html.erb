@@ -1,0 +1,9 @@
+<div class="container col-6 mt-5">
+  <h2><%= @article.title %>
+  <a href="/articles/<%= @article.id %>/edit" class="btn btn-success mr-4"><i class="far fa-edit"></i></a>
+  <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/articles/<%= @article.id%>" class="btn btn-danger">
+    <i class="fas fa-trash-alt"></i>
+  </a>
+  </h2>
+  <p><%= @article.content %></p>
+</div>
